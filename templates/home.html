@@ -31,7 +31,7 @@
   </head>
   <body>
     {% include 'nav.html' %}
-     <img class="img-fluid" id ="banner" src="https://f94e4117-b018-433d-8155-8070885ab0f4-00-2mn0afkwdjc4l.picard.replit.dev/static/banner.jpg.jpg".jpg alt=""> 
+     <img class="img-fluid" id ="banner" src="https://f94e4117-b018-433d-8155-8070885ab0f4-00-2mn0afkwdjc4l.picard.replit.dev/static/banner.png" alt=""> 
 <div class="container">
 
 <h1 class="text-center mt-4 mb-4">
@@ -42,7 +42,7 @@
   <!-- <h2 class="text-center mt-2 mb-4">
     About Lashe
   </h2 > -->
-  <div class="row">
+  <div class="row" style="align-items: center;">
     <div class="col-md-6">
 <p class="lead">
  
@@ -62,18 +62,19 @@ You may be wondering why we did not use replit insted, that is because replit do
 </p>
       </div>
      <div class="d-none d-md-block col-6">
-<img src="/static/people.jpg" style="height:320px; border-radius:4px;" >
+<img src="/static/people.jpg" style="height:320px; width:650px; border-radius:4px;" >
        </div>
 </div>
 
-  <h2>Work Experiences </h2>
+  <div style="margin-top:50px">
+    <h2 style="margin-bottom: 8px; background-color: rgb(245, 245, 245); width:300px; padding:10px; border-redius:4px;">Work Experiences</h2>
   <!-- Templating syntax by Flsk, a way to insert dynamic data in HTML and Css -->
   <div>
     {% for job in jobs %}
      {%include 'jobitem.html' %}
     {% endfor %}
   </div>
-
+    </div>
 
   <!--this is how to apply style in-line  -->
 <div class="text-center" >
