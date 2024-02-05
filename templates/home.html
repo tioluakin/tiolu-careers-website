@@ -30,27 +30,26 @@
 
   </head>
   <body>
+    {% include 'nav.html' %}
+     <img class="img-fluid" id ="banner" src="https://f94e4117-b018-433d-8155-8070885ab0f4-00-2mn0afkwdjc4l.picard.replit.dev/static/banner.jpg.jpg".jpg alt=""> 
 <div class="container">
 
-<h1 class="text-center mt-9 mb-4">
+<h1 class="text-center mt-4 mb-4">
 {{company_name}} Lashe
 </h1>
 
 
-   <img class="img-fluid" id ="banner" src="https://f94e4117-b018-433d-8155-8070885ab0f4-00-2mn0afkwdjc4l.picard.replit.dev/static/banner.jpg.jpg".jpg alt=""> 
-
-  <h2 class="text-center mt-2 mb-4">
+  <!-- <h2 class="text-center mt-2 mb-4">
     About Lashe
-  </h2 >
+  </h2 > -->
+  <div class="row">
+    <div class="col-md-6">
 <p class="lead">
-
- 
- 
  
  Now we have some dynamic data that we have rendered. we have taken information that was stored inside the JOBS list in app.py and and passed it into the render template (@app.route("/")) as a variable called jobs and of course we also passed another variable called 'company_name' which is the name of the company that we have passed into the template.
   <br><br>
 We are getting values out of the job variables into jobs and then passing it into the template called jobitem.html where we are using actual information inside the jobitem.
-  <br><br>
+  <!-- <br><br>
   Look at the appropriate documentation to create a template like this or just search online to figure out how. 90% of web development is done probably by just looking thngs up online. No body remembers all these from scratch
   <br>
   Now let's take the items in the JOBS list and render and covert them into a JASON string and then pass it into the template. We willl do this by using the jsonify function.. Let's go to app.py and add the appropriate codes.
@@ -59,12 +58,15 @@ Just to differeciate between a html page and none... we will be adding /api to (
   <br><br>
   Let's now deploy ths project to the cloud using render.com because it is really easy to work with. 
    <br><br>
-You may be wondering why we did not use replit insted, that is because replit does not really handle large workload. It is doing a lot of things to help you develope more EFFICIENTLY.
-
-
+You may be wondering why we did not use replit insted, that is because replit does not really handle large workload. It is doing a lot of things to help you develope more EFFICIENTLY. -->
 </p>
+      </div>
+     <div class="d-none d-md-block col-6">
+<img src="/static/people.jpg" style="height:320px; border-radius:4px;" >
+       </div>
+</div>
 
-  <h2>Openings</h2>
+  <h2>Work Experiences </h2>
   <!-- Templating syntax by Flsk, a way to insert dynamic data in HTML and Css -->
   <div>
     {% for job in jobs %}
@@ -75,12 +77,12 @@ You may be wondering why we did not use replit insted, that is because replit do
 
   <!--this is how to apply style in-line  -->
 <div class="text-center" >
-  <button class="btn btn-primary btn-lg">Contact Us</button>
-  <p class="mt-4">Lashe &copy; 2024. All rights reserved</p>
-</div>
+  <a class="btn btn-primary btn-lg" href="mailto:tioluakin@gmail.com?subject=Questions%20about%20job%20work%20experience&body=My%20name%3A%20(your%20name%20here)%0D%0AMy%20questions%3A%20(enter%20questions%20here")>Contact Us</a>
 
+</div>
   
 </div>
+    {% include 'footer.html'%}
   </body>
 </html>
 

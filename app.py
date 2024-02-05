@@ -7,14 +7,14 @@ JOBS =[
 {
   'id': '1',
   'title': 'Data Analyst',
-  'location': 'Bengaluru, India',
-  'salary': 'Rs. 10,00,000'
+  'location': 'Canada/Remote',
+  # 'salary': 'Rs. 10,00,000'
 },
 {
   'id': '2',
   'title': 'Data Scientist',
-  'location': 'Bengaluru, India',
-  'salary': 'Rs. 10,00,000'
+  'location': 'Lagos,Nigeria',
+  # 'salary': 'Rs. 10,00,000'
 },
   {
     'id': '3',
@@ -25,8 +25,8 @@ JOBS =[
   {
     'id': '3',
     'title': 'Backend Developer',
-    'location': 'Abuja, Nigeia',
-    'salary': 'N150,00,000'
+    'location': 'Tanzania',
+    # 'salary': 'N150,00,000'
   },
 ]
   
