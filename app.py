@@ -26,7 +26,7 @@ JOBS =[
     'id': '3',
     'title': 'Backend Developer',
     'location': 'Abuja, Nigeia',
-    'salary': 'N10,00,000'
+    'salary': 'N150,00,000'
   },
 ]
   
