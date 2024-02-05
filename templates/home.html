@@ -1,102 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
+ <!-- <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Lashe Careers</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+  <!-- bootstrap start -->
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- bootstrap ends -->
+ <title>  Careers</title>
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 
+
+
   <style>
-body{
-  background-color:#ffc;
+
+#banner{
+  height:360px;
+  width:100%;
+  object-fit:cover;
 }
-
-    #container{
-  max-width: 720px;
-      /* quick way to center something on a page */
-    margin: 0 auto;
-    }
-
-    
-    #banner{
-      width:100%;
-      height:300px;
-      object-fit:cover;
-
-    }
-    
-
- h1{
-  font-family:Roboto;
-  font-size:40px;
-   text-align:center;
-}
-
-     h2{
-      font-family:Roboto;
-      font-size:35px;
-       text-align:center;
-    }
-
-    
-
-    .bodytext{
-      font-family:Roboto;
-     
-      
-    } 
     
   </style>
+
   
 
 
   </head>
   <body>
-<div id="container">
+<div class="container">
 
-<h1>
-Everything Lashe
+<h1 class="text-center mt-9 mb-4">
+{{company_name}} Lashe
 </h1>
 
 
-   <img id ="banner" src="https://f94e4117-b018-433d-8155-8070885ab0f4-00-2mn0afkwdjc4l.picard.replit.dev/static/banner.jpg.jpg".jpg alt=""> 
+   <img class="img-fluid" id ="banner" src="https://f94e4117-b018-433d-8155-8070885ab0f4-00-2mn0afkwdjc4l.picard.replit.dev/static/banner.jpg.jpg".jpg alt=""> 
 
-  <h2>
+  <h2 class="text-center mt-2 mb-4">
     About Lashe
-  </h2>
-<p class"bodytext">
-
-  Certainly! Here are some SEO-friendly keywords and phrases that you can consider incorporating into your content, depending on your niche or topic:
+  </h2 >
+<p class="lead">
 
  
  
-  Scientific discoveries
-  Nature exploration
-  Environmental issues
-  Wildlife documentaries
-  Space exploration
-  Entertainment:
+ 
+ Now we have some dynamic data that we have rendered. we have taken information that was stored inside the JOBS list in app.py and and passed it into the render template (@app.route("/")) as a variable called jobs and of course we also passed another variable called 'company_name' which is the name of the company that we have passed into the template.
+  <br><br>
+We are getting values out of the job variables into jobs and then passing it into the template called jobitem.html where we are using actual information inside the jobitem.
+  <br><br>
+  Look at the appropriate documentation to create a template like this or just search online to figure out how. 90% of web development is done probably by just looking thngs up online. No body remembers all these from scratch
+  <br>
+  Now let's take the items in the JOBS list and render and covert them into a JASON string and then pass it into the template. We willl do this by using the jsonify function.. Let's go to app.py and add the appropriate codes.
+  <br>
+Just to differeciate between a html page and none... we will be adding /api to ("/jobs") in the app.py file. API stands for Application Programming Interface, its just a URL which returns some structured data in the form of JASON which can then be programmatically analyzed.
+  <br><br>
+  Let's now deploy ths project to the cloud using render.com because it is really easy to work with. 
+   <br><br>
+You may be wondering why we did not use replit insted, that is because replit does not really handle large workload. It is doing a lot of things to help you develope more EFFICIENTLY.
 
-  Movie reviews
-  TV show recaps
-  Celebrity news
-  Entertainment updates
-  Pop culture discussions
-  Remember to choose keywords that align with your content and resonate with your target audience. Utilize a mix of broad and specific terms to cater to different search intents. Regularly update your keyword strategy based on industry trends and user behavior.
+
 </p>
 
-<h2> Open Possitions </h2>
-  <pclass"bodytext">TODO - Show the jobs here </p>
+  <h2>Open Positions</h2>
+  <!-- Templating syntax by Flsk, a way to insert dynamic data in HTML and Css -->
+  <div>
+    {% for job in jobs %}
+     {%include 'jobitem.html' %}
+    {% endfor %}
+  </div>
+
 
   <!--this is how to apply style in-line  -->
-<div style= "text-align:center;">
-  <button>Contact Us</button>
-  <p>Lashe &copy; 2024. All rights reserved</p>
+<div class="text-center" >
+  <button class="btn btn-primary btn-lg">Contact Us</button>
+  <p class="mt-4">Lashe &copy; 2024. All rights reserved</p>
 </div>
 
   
 </div>
   </body>
 </html>
-  
+
+
+
+
+
